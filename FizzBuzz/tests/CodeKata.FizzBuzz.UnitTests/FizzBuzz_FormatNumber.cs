@@ -1,15 +1,14 @@
-﻿using CodeKata.FizBuzz;
-using Xunit;
+﻿using Xunit;
 
 namespace CodeKata.FizzBuzz.UnitTests
 {
     public class FizzBuzz_FormatNumber
     {
-        private FizzBuzzServie _fizzBuzzService;
+        private FizzBuzz _fizzBuzz;
 
         public FizzBuzz_FormatNumber()
         {
-            _fizzBuzzService = new FizzBuzzServie();
+            _fizzBuzz = new FizzBuzz();
         }
 
         [Theory]
@@ -31,7 +30,7 @@ namespace CodeKata.FizzBuzz.UnitTests
         [InlineData(16, "16")]
         public void ReturnCorrectResult_GivenInput(int input, string expectedResult)
         {
-            var result = _fizzBuzzService.FormatNumber(input);
+            var result = _fizzBuzz.FormatNumber(input);
 
             Assert.Equal(expectedResult, result);
         }
@@ -39,7 +38,7 @@ namespace CodeKata.FizzBuzz.UnitTests
         [Fact]
         public void Return1_Given1()
         {
-            var result = _fizzBuzzService.FormatNumber(1);
+            var result = _fizzBuzz.FormatNumber(1);
 
             Assert.Equal("1", result);
         }
@@ -47,7 +46,7 @@ namespace CodeKata.FizzBuzz.UnitTests
         [Fact]
         public void Return2_Given2()
         {
-            var result = _fizzBuzzService.FormatNumber(2);
+            var result = _fizzBuzz.FormatNumber(2);
 
             Assert.Equal("2", result);
         }
@@ -55,7 +54,7 @@ namespace CodeKata.FizzBuzz.UnitTests
         [Fact]
         public void ReturnFizz_Given3()
         {
-            var result = _fizzBuzzService.FormatNumber(3);
+            var result = _fizzBuzz.FormatNumber(3);
 
             Assert.Equal("Fizz", result);
         }
@@ -63,7 +62,7 @@ namespace CodeKata.FizzBuzz.UnitTests
         [Fact]
         public void ReturnFizz_Given5()
         {
-            var result = _fizzBuzzService.FormatNumber(5);
+            var result = _fizzBuzz.FormatNumber(5);
 
             Assert.Equal("Buzz", result);
         }
@@ -71,7 +70,7 @@ namespace CodeKata.FizzBuzz.UnitTests
         [Fact]
         public void ReturnFizz_Given15()
         {
-            var result = _fizzBuzzService.FormatNumber(15);
+            var result = _fizzBuzz.FormatNumber(15);
 
             Assert.Equal("FizzBuzz", result);
         }
