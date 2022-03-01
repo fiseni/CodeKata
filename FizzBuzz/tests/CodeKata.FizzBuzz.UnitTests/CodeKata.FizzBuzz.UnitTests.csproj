@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeKata.FizBuzz\CodeKata.FizBuzz.csproj" />
+    <ProjectReference Include="..\..\src\CodeKata.FizBuzz\CodeKata.FizBuzz.csproj" />
   </ItemGroup>
 
 </Project>
